@@ -31,7 +31,7 @@ export class ContentCardComponent implements OnInit {
     description:"The lyrics of Despacito, were written in late 2015 in Luis Fonsi's house in Miami because he wanted to record a swinging song for his new album after two years without releasing new music",
     creator:" Luis Fonsi and Daddy Yankee",
     imgURL:"https://en.wikipedia.org/wiki/Despacito#/media/File:Luis_Fonsi_Feat._Daddy_Yankee_-_Despacito_(Official_Single_Cover).png",
-    type:"Plant"
+    type:"Pop"
   }
 
 songCards = new ContentList(this.songCard);
@@ -48,7 +48,7 @@ songCards = new ContentList(this.songCard);
   
   
     ngOnInit(): void {
-      const div = document.getElementById('pokemonCards');
+      const div = document.getElementById('songCards');
       console.log(div);
       if(div) {
         div.innerHTML += this.songCards.printProperties(0);
