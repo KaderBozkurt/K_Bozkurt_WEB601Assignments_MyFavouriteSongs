@@ -22,16 +22,17 @@ export class ContentCardComponent implements OnInit {
     title:"Fairytale",
     description:"In February 2009, Norwegian media reported that Fairytale is about Rybak's ex-girlfriend Ingrid Berg Mehus whom he got to know through the Barratt Due Institute of Music in Oslo",
     creator:"Alexander Rybak",
-    imgURL:"https://en.wikipedia.org/wiki/Fairytale_(Alexander_Rybak_song)#/media/File:Alexander_fairytale.jpg",
+    imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Alexander_Rybak_001.jpg/640px-Alexander_Rybak_001.jpg",
     type:"Pop folk"
   }
+
   songCard3:Content = {
     id:3,
-    title:"Despacito",
-    description:"The lyrics of Despacito, were written in late 2015 in Luis Fonsi's house in Miami because he wanted to record a swinging song for his new album after two years without releasing new music",
-    creator:" Luis Fonsi and Daddy Yankee",
-    imgURL:"https://en.wikipedia.org/wiki/Despacito#/media/File:Luis_Fonsi_Feat._Daddy_Yankee_-_Despacito_(Official_Single_Cover).png",
-    type:"Pop"
+    title:"Anti-Hero",
+    description:"Anti-Hero is a song by American singer-songwriter Taylor Swift and the lead single from her tenth studio album, Midnights (2022). Written and produced by Swift and Jack Antonoff, Anti-Hero is a pop rock and synth-pop song driven by looped drums and retro synthesizers.",
+    creator:" Taylor Swift",
+    imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taylor_Swift_2009_MTV_VMA_%28cropped%29.jpg/640px-Taylor_Swift_2009_MTV_VMA_%28cropped%29.jpg",
+    type:"Pop-rock"
   }
 
 songCards = new ContentList(this.songCard);
@@ -48,13 +49,7 @@ songCards = new ContentList(this.songCard);
   
   
     ngOnInit(): void {
-      const div = document.getElementById('songCards');
-      console.log(div);
-      if(div) {
-        div.innerHTML += this.songCards.printProperties(0);
-        div.innerHTML += this.songCards.printProperties(1);
-        div.innerHTML += this.songCards.printProperties(2);
-      }
+      
   
     }
   }
