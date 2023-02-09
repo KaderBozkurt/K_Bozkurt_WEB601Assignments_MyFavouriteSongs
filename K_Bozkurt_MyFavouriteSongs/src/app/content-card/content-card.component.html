@@ -6,7 +6,7 @@
 <div class="container">
   <h1 class="title"> Songs title:  {{songs? songs.title: ""}}  </h1>
     
- <div> <img class="img" (click)="clickevent()" *ngIf="songs? songs.imgURL  :''"  [src]= 'songs? songs.imgURL  :""' style="width: 200px; " />
+ <div> <img class="img" (click)="clickevent()" *ngIf="songs? songs.imgURL  :''"  [src]= 'songs? songs.imgURL  :""' />
 </div>
   <div><strong>By: </strong> {{songs? songs.creator:""}}<div>
   <div class="type" *ngIf="songs? songs.type  :''"><strong>Type:</strong> {{songs?  songs.type :""}}</div>

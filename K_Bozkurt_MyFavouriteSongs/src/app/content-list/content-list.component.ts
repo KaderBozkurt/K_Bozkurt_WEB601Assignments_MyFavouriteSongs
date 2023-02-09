@@ -32,7 +32,7 @@ export class ContentListComponent implements OnInit {
 {
   id:3,
   title:"Anti-Hero",
-  description:"Anti-Hero is a song by American singer-songwriter Taylor Swift and the lead single from her tenth studio album, Midnights (2022). Written and produced by Swift and Jack Antonoff, Anti-Hero is a pop rock and synth-pop song driven by looped drums and retro synthesizers.",
+  description:"Anti-Hero is a song by American singer-songwriter Taylor Swift and the lead single from her tenth studio album, Midnights (2022).",
   creator:" Taylor Swift",
   imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taylor_Swift_2009_MTV_VMA_%28cropped%29.jpg/640px-Taylor_Swift_2009_MTV_VMA_%28cropped%29.jpg",
   type:"Pop-rock",
@@ -40,29 +40,30 @@ export class ContentListComponent implements OnInit {
 },
    {
     id:4,
-    title:"Anti-Hero",
-    description:"Anti-Hero is a song by American singer-songwriter Taylor Swift and the lead single from her tenth studio album, Midnights (2022). Written and produced by Swift and Jack Antonoff, Anti-Hero is a pop rock and synth-pop song driven by looped drums and retro synthesizers.",
-    creator:" Taylor Swift",
-    imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taylor_Swift_2009_MTV_VMA_%28cropped%29.jpg/640px-Taylor_Swift_2009_MTV_VMA_%28cropped%29.jpg",
-    type:"Pop-rock",
-    tags:["Rock", "Pop", "Pop-Rock"]
+    title:"Flowers (Miley Cyrus song)",
+    description:"Flowers is a song by American singer Miley Cyrus. ",
+    creator:" Miley Cyrus",
+    imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Miley_Cyrus_2010_MMVA_%28Straighten_Crop%29.jpg/640px-Miley_Cyrus_2010_MMVA_%28Straighten_Crop%29.jpg",
+    type:"Disco-pop",
+    tags:["Rock", "Pop", "Disco"]
    },
    { 
     id:5,
-    title:"Anti-Hero",
-    description:"Anti-Hero is a song by American singer-songwriter Taylor Swift and the lead single from her tenth studio album, Midnights (2022). Written and produced by Swift and Jack Antonoff, Anti-Hero is a pop rock and synth-pop song driven by looped drums and retro synthesizers.",
+    title:"Calm Down",
+    description:"Calm Down is a song by Nigerian singer Rema, from his debut studio album Rave & Roses (2022).",
     creator:" Taylor Swift",
-    imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taylor_Swift_2009_MTV_VMA_%28cropped%29.jpg/640px-Taylor_Swift_2009_MTV_VMA_%28cropped%29.jpg",
-    type:"Pop-rock",
-    tags:["Pop", "Rock"]
+    imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Selena_Gomez_2016.png/640px-Selena_Gomez_2016.png",
+    type:"Afrobeast",
+    tags:["Pop", "Slow"]
   },
   {
     id:6,
-    title:"Anti-Hero",
-    description:"Anti-Hero is a song by American singer-songwriter Taylor Swift and the lead single from her tenth studio album, Midnights (2022). Written and produced by Swift and Jack Antonoff, Anti-Hero is a pop rock and synth-pop song driven by looped drums and retro synthesizers.",
-    creator:" Taylor Swift",
-    imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taylor_Swift_2009_MTV_VMA_%28cropped%29.jpg/640px-Taylor_Swift_2009_MTV_VMA_%28cropped%29.jpg",
-    type:"Pop-rock",
+    title:"Kill Bill (SZA song)",
+    description:"A martial arts film duology that focuses on an assassin named the Bride and her quest to exact revenge on her ex-boyfriend by murdering him.",
+    creator:"SZA ",
+    imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/SZA_performing.jpg/640px-SZA_performing.jpg",
+    
+    type:"Pop",
     tags:["Rock", "Pop"]
   
       }];
