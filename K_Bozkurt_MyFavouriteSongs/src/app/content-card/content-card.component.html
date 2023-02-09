@@ -2,17 +2,17 @@
 <!--<div id="songCards" style="font-size: 1em; border: 1px solid black; border-width: 150px; padding-left: 25px; padding-bottom: 25px;">
   <h1 style="text-align: center;">My Favourite Songs Card</h1>
 </div>-->
-<div class="row"style="padding-left:25px; border: 1px solid black; border-width: 200px;">
-  <h1 class="card-header" style="text-align: center;">My Favourite Songs Cards</h1>
-  <div class="card" *ngFor="let items of contentList;" style="max-width: 30rem; border: 1px solid black;">
-      
-      <div class="card-body" style="text-align: center;">
-        <h2 class="card-title"><strong>Title: </strong> {{ items.title }}</h2>
-        <img src={{items.imgURL}} style="width: 200px;"><br/><br/>
-        <strong>By: </strong>{{ items.creator }}<br />
-        <p class="card-text"><strong>Description: </strong> {{ items.description }}</p><hr>
-       
-     
-      </div>
-    </div>
+<div class="row">
+<div class="container">
+  <h1 class="title"> Songs title:  {{songs? songs.title: ""}}  </h1>
+    
+ <div> <img class="img" (click)="clickevent()" *ngIf="songs? songs.imgURL  :''"  [src]= 'songs? songs.imgURL  :""' style="width: 200px; " />
 </div>
+  <div><strong>By: </strong> {{songs? songs.creator:""}}<div>
+  <div class="type" *ngIf="songs? songs.type  :''"><strong>Type:</strong> {{songs?  songs.type :""}}</div>
+  <div class="tags" *ngIf="songs? songs.tags  :''"><strong> Tags:</strong>  {{songs? songs.tags :""}}</div>
+  <div class="description"> <strong>Description: </strong>  {{songs? songs.description:""}} </div><br>
+</div>
+</div>
+
+
