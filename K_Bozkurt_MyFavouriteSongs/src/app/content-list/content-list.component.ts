@@ -8,7 +8,9 @@ import { content } from '../helper-files/content-interface';
 })
 export class ContentListComponent implements OnInit {
   contentArray:content[];
+  outPut:string;
   @Input() isFirst: Boolean;
+  
   constructor() {
     this.isFirst=false;
     this.contentArray=[{
@@ -17,7 +19,7 @@ export class ContentListComponent implements OnInit {
     description:"Dance Monkey topped the official singles charts in over 30 countries and peaked within the top ten of many others, including the United States. ",
     creator:"Tones and I",
     imgURL:"https://upload.wikimedia.org/wikipedia/en/1/1f/Dance_Monkey_by_Tones_and_I.jpg",
-    type:"Electropop",
+    type:"pop",
     tags:["Pop", "Electropop"]
     },
 {
@@ -26,7 +28,7 @@ export class ContentListComponent implements OnInit {
     description:"In February 2009, Norwegian media reported that Fairytale is about Rybak's ex-girlfriend Ingrid Berg Mehus whom he got to know through the Barratt Due Institute of Music in Oslo",
     creator:"Alexander Rybak",
     imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Alexander_Rybak_001.jpg/640px-Alexander_Rybak_001.jpg",
-    type:"Pop folk",
+    type:"pop",
     tags:["Pop", "Pop Folk"]
 },
 {
@@ -35,7 +37,7 @@ export class ContentListComponent implements OnInit {
   description:"Anti-Hero is a song by American singer-songwriter Taylor Swift and the lead single from her tenth studio album, Midnights (2022).",
   creator:" Taylor Swift",
   imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taylor_Swift_2009_MTV_VMA_%28cropped%29.jpg/640px-Taylor_Swift_2009_MTV_VMA_%28cropped%29.jpg",
-  type:"Pop-rock",
+  type:"pop",
   tags:["Pop", "Rock", "Pop-Rock"]
 },
    {
@@ -44,8 +46,8 @@ export class ContentListComponent implements OnInit {
     description:"Flowers is a song by American singer Miley Cyrus. ",
     creator:" Miley Cyrus",
     imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Miley_Cyrus_2010_MMVA_%28Straighten_Crop%29.jpg/640px-Miley_Cyrus_2010_MMVA_%28Straighten_Crop%29.jpg",
-    type:"Disco-pop",
-    tags:["Rock", "Pop", "Disco"]
+    type:"",
+    tags:["Rock", "Disco"]
    },
    { 
     id:5,
@@ -63,17 +65,45 @@ export class ContentListComponent implements OnInit {
     creator:"SZA ",
     imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/SZA_performing.jpg/640px-SZA_performing.jpg",
     
-    type:"Pop",
-    tags:["Rock", "Pop"]
+    type:"",
+    tags:["Rock", "slow"]
   
-      }];
-   }
-  
-   
-  
-  
-    ngOnInit(): void {
+      },
+      {
+        id:7,
+      title:"JINJA",
+      description:"It's nice to song ",
+      creator:"Tekno",
+      imgURL:"https://guardian.ng/wp-content/uploads/2019/08/49858720_230331414565117_4561737748797224919_n-e1564987671405.jpg" ,
+      type:"Afrobeast",
+      tags:['pop','slow','slow-rock' ]
+      }
       
+    ];
+    this.outPut="";
+   }
+     
+  
+  
+    ngOnInit(): void {}
+
+      findTitle(findTitle:string):void{
+        for(let i=0;this.contentArray.length>=i;i++){
+          let title=document.querySelector<HTMLElement>(`.${this.contentArray[i].title}`);
+           title?.classList.remove('selected');
+          if(this.contentArray[i].title.toLowerCase()==findTitle.toLowerCase()){
+             this.outPut="this title is available in the content card";
+             title?.classList.remove('selected');
+             title?.classList.add('selected');
+             break;
+            }
+            else{
+               this.outPut= "this title is not available in the content card";
+              
+                }
+            title?.classList.remove('selected');
+          
+        }
   
     }
   

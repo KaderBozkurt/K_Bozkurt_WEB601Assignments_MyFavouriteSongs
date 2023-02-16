@@ -25,3 +25,16 @@ div{
 :host.is-first{
 border: black solid 2px;
 }
+
+:host.noType{
+    background-color: rgb(225, 237, 241);
+}
+:host.popType{
+    background-color: rgba(184, 218, 184, 0.603);
+}
+:host.AfrobeastType{
+    background-color: rgba(255, 192, 203, 0.5);
+}
+:host .selected{
+    background-color: rgba(255, 255, 2, 0.767);
+}
