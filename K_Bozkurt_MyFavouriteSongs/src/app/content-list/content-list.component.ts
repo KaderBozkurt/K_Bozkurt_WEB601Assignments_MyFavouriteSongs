@@ -10,6 +10,7 @@ export class ContentListComponent implements OnInit {
   contentArray:content[];
   outPut:string;
   @Input() isFirst: Boolean;
+  messageColor!: string;
   
   constructor() {
     this.isFirst=false;
@@ -64,8 +65,7 @@ export class ContentListComponent implements OnInit {
     description:"A martial arts film duology that focuses on an assassin named the Bride and her quest to exact revenge on her ex-boyfriend by murdering him.",
     creator:"SZA ",
     imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/SZA_performing.jpg/640px-SZA_performing.jpg",
-    
-    type:"",
+    type:"Afrobeast",
     tags:["Rock", "slow"]
   
       },
@@ -95,11 +95,12 @@ export class ContentListComponent implements OnInit {
              this.outPut="this title is available in the content card";
              title?.classList.remove('selected');
              title?.classList.add('selected');
+             this.messageColor = 'green';
              break;
             }
             else{
                this.outPut= "this title is not available in the content card";
-              
+              this.messageColor = 'red';
                 }
             title?.classList.remove('selected');
           
