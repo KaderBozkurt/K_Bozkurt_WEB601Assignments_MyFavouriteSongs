@@ -2,7 +2,7 @@ Enter the title:  <input #title>
 <button (click)="findTitle(title.value)">Submit </button>
 <h2 class="selected" [ngStyle]="{ color: messageColor }">{{outPut}}</h2>
 <h1>First loop with no type passed </h1>
-<app-content-card  class="noType " *ngFor=' let item of contentArray|filterPipe; index as i; first as isFirst' [songs]=item [class.is-first]="isFirst" ></app-content-card>
+<app-content-card  class="noType " *ngFor=' let item of contentArray|filterPipe:"None" index as i; first as isFirst' [songs]=item [class.is-first]="isFirst" ></app-content-card>
 <h1>Second loop with "pop" type passed </h1>
 <app-content-card class="popType" *ngFor=' let item of contentArray|filterPipe:"pop"; index as i; first as isFirst' [songs]=item [class.is-first]="isFirst" ></app-content-card>
 <h1>Third loop with "Afrobeast" type passed </h1>

@@ -15,12 +15,13 @@ export class ContentListComponent implements OnInit {
   constructor() {
     this.isFirst=false;
     this.contentArray=[{
+
       id:1,
     title:"Dance Monkey",
     description:"Dance Monkey topped the official singles charts in over 30 countries and peaked within the top ten of many others, including the United States. ",
     creator:"Tones and I",
     imgURL:"https://upload.wikimedia.org/wikipedia/en/1/1f/Dance_Monkey_by_Tones_and_I.jpg",
-    type:"pop",
+    type:"None",
     tags:["Pop", "Electropop"]
     },
 {
@@ -47,7 +48,7 @@ export class ContentListComponent implements OnInit {
     description:"Flowers is a song by American singer Miley Cyrus. ",
     creator:" Miley Cyrus",
     imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Miley_Cyrus_2010_MMVA_%28Straighten_Crop%29.jpg/640px-Miley_Cyrus_2010_MMVA_%28Straighten_Crop%29.jpg",
-    type:"",
+    type:"pop",
     tags:["Rock", "Disco"]
    },
    { 
@@ -70,7 +71,7 @@ export class ContentListComponent implements OnInit {
   
       },
       {
-        id:7,
+      id:7,
       title:"JINJA",
       description:"It's nice to song ",
       creator:"Tekno",
@@ -86,15 +87,16 @@ export class ContentListComponent implements OnInit {
   
   
     ngOnInit(): void {}
+    
 
-      findTitle(findTitle:string):void{
-        for(let i=0;this.contentArray.length>=i;i++){
-          let title=document.querySelector<HTMLElement>(`.${this.contentArray[i].title}`);
+      findTitle(findTitle:string):void {
+
+        for(let i=0; this.contentArray.length>i; i++){
+          let title=document.querySelector(`.${this.contentArray[i].title}`);
            title?.classList.remove('selected');
           if(this.contentArray[i].title.toLowerCase()==findTitle.toLowerCase()){
              this.outPut="this title is available in the content card";
-             title?.classList.remove('selected');
-             title?.classList.add('selected');
+             
              this.messageColor = 'green';
              break;
             }
