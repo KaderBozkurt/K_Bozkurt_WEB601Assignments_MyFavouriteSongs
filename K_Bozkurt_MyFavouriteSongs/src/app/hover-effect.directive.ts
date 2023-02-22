@@ -17,20 +17,19 @@ export class HoverEffectDirective implements OnInit{
       @HostListener('mouseover') OnMouseover(){
         if(this.styling=="weight"){
           this.eRaf.nativeElement.style.fontWeight="bold";
+          this.eRaf.nativeElement.style.borderStyle="dotted"
         }
         else if(this.styling=="line"){
+          
           this.eRaf.nativeElement.style.textDecoration="underline";
         }
-        else if(this.styling=="border"){
         
-             this.eRaf.nativeElement.style.borderStyle="dotted";
-           }
           
        }
        @HostListener('mouseleave') OnMouseleave(){
          this.eRaf.nativeElement.style.textDecoration="none";
          this.eRaf.nativeElement.style.fontWeight="normal";
-         this.eRaf.nativeElement.style.borderStyle="dotted";
+         this.eRaf.nativeElement.style.borderStyle="none";
        }
 
 

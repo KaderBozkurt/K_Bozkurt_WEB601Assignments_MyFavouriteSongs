@@ -10,7 +10,7 @@
     
     <div class="creator" *ngIf="songs.creator"><strong>Creater:</strong>  {{songs? songs.creator:""}}</div>
     <div class="type" *ngIf="songs.type" appHoverEffect styling="line" ><strong>Type:</strong>{{songs? songs.type :""}} </div>
-    <div class="tags"*ngIf="songs.tags" ><strong>Tags:</strong>
+    <div class="tags"*ngIf="songs.tags" appHoverEffect styling="weight"><strong>Tags:</strong>
         <span class="tag" *ngFor="let tag of songs.tags" appHoverEffect styling="weight" >
             {{tag}}
         </span>  
