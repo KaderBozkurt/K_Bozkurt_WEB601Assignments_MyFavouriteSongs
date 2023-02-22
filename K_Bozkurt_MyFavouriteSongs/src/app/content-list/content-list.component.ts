@@ -78,6 +78,15 @@ export class ContentListComponent implements OnInit {
       imgURL:"https://guardian.ng/wp-content/uploads/2019/08/49858720_230331414565117_4561737748797224919_n-e1564987671405.jpg" ,
       type:"Afrobeast",
       tags:['pop','slow','slow-rock' ]
+      },
+      {
+        id:8,
+        title:"Tarkan",
+        description:"He is first popstar in Turkiye with this song",
+        creator:"Tarkan",
+        type:"pop",
+        tags:['Pop','Disco' ]
+
       }
       
     ];
@@ -97,6 +106,8 @@ export class ContentListComponent implements OnInit {
           if(this.contentArray[i].title.toLowerCase()==findTitle.toLowerCase()){
              this.outPut="this title is available in the content card";
              this.messageColor = 'green';
+             title?.classList.remove('selected');
+             title?.classList.add('selected');
              break;
             }
             else{
