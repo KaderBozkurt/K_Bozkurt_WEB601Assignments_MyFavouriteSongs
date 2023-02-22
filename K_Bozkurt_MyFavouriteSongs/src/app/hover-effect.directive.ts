@@ -14,7 +14,7 @@ export class HoverEffectDirective implements OnInit{
   ngOnInit(): void {
       }
 
-      @HostListener('mouseenter') OnMouseenter(){
+      @HostListener('mouseover') OnMouseover(){
         if(this.styling=="weight"){
           this.eRaf.nativeElement.style.fontWeight="bold";
         }
@@ -30,7 +30,9 @@ export class HoverEffectDirective implements OnInit{
        @HostListener('mouseleave') OnMouseleave(){
          this.eRaf.nativeElement.style.textDecoration="none";
          this.eRaf.nativeElement.style.fontWeight="normal";
-         // // this.eRaf.nativeElement.style.borderStyle="solid";
+         this.eRaf.nativeElement.style.borderStyle="dotted";
        }
+
+
 
 }
