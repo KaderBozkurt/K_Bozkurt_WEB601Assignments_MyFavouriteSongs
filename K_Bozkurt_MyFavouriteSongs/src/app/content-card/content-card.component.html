@@ -3,15 +3,22 @@
   <h1 style="text-align: center;">My Favourite Songs Card</h1>
 </div>-->
 <div class="row">
-<div class="container">
-  <h1 class="title"> Songs title:  {{songs? songs.title: ""}}  </h1>
+  <div class="container {{songs? songs.title: ''}}" *ngIf="songs">
+    <h1 class="title "*ngIf="songs.title"><strong>Title:</strong> {{songs? songs.title: ""}}</h1>
+    <img class="img" (click)="clickevent()" *ngIf="songs.imgURL"  [src]='songs.imgURL'/>
+    <img class="img" (click)="clickevent()" *ngIf="!songs.imgURL" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Tarkan_%289%29.jpg/640px-Tarkan_%289%29.jpg"/>
     
- <div> <img class="img" (click)="clickevent()" *ngIf="songs? songs.imgURL  :''"  [src]= 'songs? songs.imgURL  :""' />
-</div>
-  <div><strong>By: </strong> {{songs? songs.creator:""}}<div>
-  <div class="type" *ngIf="songs? songs.type  :''"><strong>Type:</strong> {{songs?  songs.type :""}}</div>
-  <div class="tags" *ngIf="songs? songs.tags  :''"><strong> Tags:</strong>  {{songs? songs.tags :""}}</div>
-  <div class="description"> <strong>Description: </strong>  {{songs? songs.description:""}} </div><br>
+    <div class="creator" *ngIf="songs.creator"><strong>Creater:</strong>  {{songs? songs.creator:""}}</div>
+    <div class="type" *ngIf="songs.type" appHoverEffect styling="line" ><strong>Type:</strong>{{songs? songs.type :""}} </div>
+    <div class="tags"*ngIf="songs.tags" ><strong>Tags:</strong>
+        <span class="tag" *ngFor="let tag of songs.tags" appHoverEffect styling="weight" >
+            {{tag}}
+        </span>  
+    </div>
+    <div class="description" *ngIf="songs.description"><strong> Description: </strong> {{songs? songs.description:""}} </div>
+    
+    
+    
 </div>
 </div>
 

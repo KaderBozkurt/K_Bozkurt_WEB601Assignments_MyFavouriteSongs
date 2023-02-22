@@ -81,9 +81,9 @@ export class ContentListComponent implements OnInit {
       },
       {
         id:8,
-        title:"Tarkan",
+        title:"Kuzu Kuzu",
         description:"He is first popstar in Turkiye with this song",
-        creator:"Tarkan",
+        creator:"Tarkan Tevetoğlu",
         type:"pop",
         tags:['Pop','Disco' ]
 
