@@ -96,7 +96,6 @@ export class ContentListComponent implements OnInit {
            title?.classList.remove('selected');
           if(this.contentArray[i].title.toLowerCase()==findTitle.toLowerCase()){
              this.outPut="this title is available in the content card";
-             
              this.messageColor = 'green';
              break;
             }
