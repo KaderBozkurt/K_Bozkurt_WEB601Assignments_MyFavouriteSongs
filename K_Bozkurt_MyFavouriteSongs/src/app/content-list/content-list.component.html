@@ -1,3 +1,5 @@
+<app-create-content (newSongEvent)="addContentToArray($event)"></app-create-content>
+
 Enter the title:  <input #title> 
 <button (click)="findTitle(title.value)">Submit </button>
 <h2 class="selected" [ngStyle]="{ color: messageColor }">{{outPut}}</h2>

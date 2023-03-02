@@ -121,7 +121,12 @@ export class ContentListComponent implements OnInit {
     }
   
 
-    
+    addContentToArray(newSong:content){
+   
+      this.contentArray.push(newSong);
+      this.contentArray=[...this.contentArray];
+  
+    }
 
   }
 
