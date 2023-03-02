@@ -1,13 +1,15 @@
 :host{
     display:block;
-    border: black solid 1px;
+    border: 1px gray solid ;
     margin: 12px auto;
     width: 400px;
     height: 560px;
     box-sizing: border-box;
-    
+    box-shadow:  5px 10px #888888;
+    border-radius: 15px;
+    margin-bottom: 5px;
     .container{
-        padding: 12px;
+        padding: 10px;
     }
     h1{
    text-align: center;
@@ -23,8 +25,7 @@ div{
 
 }
 :host.is-first{
-border: black solid 2px;
-}
+border: 2px solid  gray;}
 
 :host.noType{
     background-color: rgb(225, 237, 241);

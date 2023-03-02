@@ -40,7 +40,7 @@ errorMsg?:string;
       let testPass=false;
       if(id.length>0 && title.length>0 && description.length>0 &&creater.length>0 ){
         testPass=true;
-        // success("sucess");
+       
         
       }
       else{
@@ -49,7 +49,7 @@ errorMsg?:string;
       }
       if (testPass) {
         this.errorMsg="";
-        success("The addition successful for the hobby title :" + " " + this.newContent?.title);
+        success("The addition successful for the song title :" + " " + this.newContent?.title);
         this.newSongEvent.emit(this.newContent);
         this.inputId.nativeElement.value="";
         this.inputTitle.nativeElement.value="";
@@ -62,7 +62,7 @@ errorMsg?:string;
         
       }
       else {
-        fail("the content failed to be added , the required field must be added it (required field is id , title ,description and creater )");
+        fail("The content failed to be added, Please provide the required fields (id , title ,description and creater )");
       }
   }
   

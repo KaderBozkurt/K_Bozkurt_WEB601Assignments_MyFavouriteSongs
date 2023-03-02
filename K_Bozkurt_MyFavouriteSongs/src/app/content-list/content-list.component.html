@@ -1,11 +1,11 @@
 <app-create-content (newSongEvent)="addContentToArray($event)"></app-create-content>
 
-Enter the title:  <input #title> 
-<button (click)="findTitle(title.value)">Submit </button>
+ <div class="tit" style="text-align: center; margin-top: 116px;">Enter the title:  <input #title> 
+<button (click)="findTitle(title.value)">Submit </button></div>
 <h2 class="selected" [ngStyle]="{ color: messageColor }">{{outPut}}</h2>
-<h1>First loop with no type passed </h1>
+<h1>"None"</h1>
 <app-content-card  class="noType " *ngFor=' let item of contentArray|filterPipe:"None" index as i; first as isFirst' [songs]=item [class.is-first]="isFirst" ></app-content-card>
-<h1>Second loop with "pop" type passed </h1>
+<h1>"Pop"</h1>
 <app-content-card class="popType" *ngFor=' let item of contentArray|filterPipe:"pop"; index as i; first as isFirst' [songs]=item [class.is-first]="isFirst" ></app-content-card>
-<h1>Third loop with "Afrobeast" type passed </h1>
+<h1>"Afrobeast"</h1>
 <app-content-card class="AfrobeastType"  *ngFor=' let item of contentArray|filterPipe:"Afrobeast"; index as i; first as isFirst' [songs]=item [class.is-first]="isFirst" ></app-content-card>
