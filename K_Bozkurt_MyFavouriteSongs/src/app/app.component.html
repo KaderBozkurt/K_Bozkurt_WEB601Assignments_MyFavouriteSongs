@@ -1,1 +1,10 @@
+<h1>Content Item at id:{{id.value}}</h1>
+<div class="input ">
+    Id Number Here: <input placeholder="id" #id>
+    <button (click)="show(id.value)">Show</button>
+</div>
+
+<app-content-card class="oneContent" [songs]="oneContent"></app-content-card>
+
+<app-messages></app-messages>
 <app-content-list></app-content-list>

@@ -17,7 +17,7 @@ export class HoverEffectDirective implements OnInit{
       @HostListener('mouseover') OnMouseover(){
         if(this.styling=="weight"){
           this.eRaf.nativeElement.style.fontWeight="bold";
-          this.eRaf.nativeElement.style.borderStyle="dotted"
+         // this.eRaf.nativeElement.style.borderStyle="dotted"
         }
         else if(this.styling=="line"){
           

@@ -1,0 +1,31 @@
+h2 {
+    color: #A80000;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .clear {
+    color: #333;
+    background-color: #eee;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding: 0.8rem;
+    border-radius: 15px;
+    font-size: 0.7rem;
+   
+
+  }
+  .clear:hover {
+    color: white;
+    background-color: #42545C;
+  }
+  :host {
+    display:block;
+    border: black solid 1px;
+    margin: 12px auto;
+    padding: 12px;
+    width:300px;
+    border-radius: 15px;
+    box-sizing: border-box;
+  }
