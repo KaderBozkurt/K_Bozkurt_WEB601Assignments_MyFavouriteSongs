@@ -16,7 +16,7 @@ export class SongService {
   }
   getSongs(): Observable<content[]> {
     const songs = of(CONTENTARRAY);
-    this.messageService.add('Content array loeaded!');
+    this.messageService.add('Content Loaded!');
     return songs;
   }
 }
