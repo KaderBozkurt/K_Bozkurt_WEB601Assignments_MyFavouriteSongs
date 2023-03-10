@@ -20,10 +20,10 @@ export class AppComponent {
   ngOnInit(): void{this.getSongs();
   }
   onSelect(content:content): void {
-    this.messageService.add(`SongComponent: Selected song id=${content.id}`);
+    this.messageService.add(`You are Selected song id=${content.id}`);
   }
   errorMessage():void{
-    this.messageService.add("Some kind of error occured!");
+    this.messageService.add("Some kind of error has occurred. Please enter a valid Id number!");
   }
   getSongs(): void {
     this.songService.getSongs()
