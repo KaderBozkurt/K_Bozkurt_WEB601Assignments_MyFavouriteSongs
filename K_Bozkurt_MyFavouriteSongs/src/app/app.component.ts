@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import{content} from '../app/helper-files/content-interface';
+import { content } from './helper-files/content-interface';
 import { MessageService } from './message.service';
 import { SongService } from './song.service';
-import{subscribeOn} from 'rxjs';
-import{concatMap, filter, map} from 'rxjs/operators'
+import {  subscribeOn } from 'rxjs';
+import { concatMap,filter,map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -11,13 +11,20 @@ import{concatMap, filter, map} from 'rxjs/operators'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'K_Bozkurt_MyFavouriteSongs';
+  title = 'KaderBozkurt_songs';
   oneContent?:content;
+  
   songs?:content[];
   selectedSong?:content;
   id?:number;
-  constructor(private songService:SongService, private messageService:MessageService){}
-  ngOnInit(): void{this.getSongs();
+  constructor(private songService:SongService, private messageService:MessageService){
+   
+  }
+  ngOnInit(): void{
+    this.getSongs();
+    
+    
+    
   }
   onSelect(content:content): void {
     this.messageService.add(`SongComponent: Selected song id=${content.id}`);
@@ -48,7 +55,7 @@ export class AppComponent {
       else{
         this.errorMessage();
         return  this.oneContent={
-          id:0,
+          // id:0,
           title:"",
           description:"",
           creator:"",
